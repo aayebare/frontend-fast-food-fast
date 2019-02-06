@@ -1,0 +1,3 @@
+[![Build Status](https://travis-ci.org/m-asiimwe/frontend-fast-food-fast.svg?branch=develop)](https://travis-ci.org/m-asiimwe/frontend-fast-food-fast)
+[![Maintainability](https://api.codeclimate.com/v1/badges/dddcfc22e49405bc7251/maintainability)](https://codeclimate.com/github/m-asiimwe/frontend-fast-food-fast/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/dddcfc22e49405bc7251/test_coverage)](https://codeclimate.com/github/m-asiimwe/frontend-fast-food-fast/test_coverage)
