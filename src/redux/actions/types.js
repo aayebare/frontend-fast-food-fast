@@ -1,0 +1,7 @@
+const AUTH = {
+    SIGN_UP_SUCCESS: 'SIGN_UP_SUCCESS',
+    SIGN_UP_FAILURE: 'SIGN_UP_FAILURE',
+    ERROR_OCCURRED: 'ERROR_OCCURRED',
+  };
+
+export default AUTH;
