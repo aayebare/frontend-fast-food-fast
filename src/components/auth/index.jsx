@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const SignUpForm = (props) => {
   const {
     isSignUp,
+    addItem,
     onSubmit,
     onChangeToLogin,
     title,
@@ -19,37 +20,61 @@ const SignUpForm = (props) => {
           <div className="card-body">
             <h5 className="card-title text-center">{title}</h5>
             <form className="form-signin" onSubmit={onSubmit}>
-              { isSignUp && (<div className="form-label-group">
+
+              { isSignUp && !addItem && (<div className="form-label-group">
                 <input type="name" id="username" className="form-control" placeholder="User name" name="username" required autoFocus/>
                 <label htmlFor="username">Username</label>
               </div>
               )
               }
-              <div className="form-label-group">
+              {!addItem && (<div className="form-label-group">
                 <input type="email" id="inputEmail" className="form-control" placeholder="Email address" name="email" required autoFocus/>
                 <label htmlFor="inputEmail">Email address</label>
               </div>
+              )}
              
 
-              <div className="form-label-group">
+              {!addItem && (<div className="form-label-group">
                 <input type="password" id="inputPassword" className="form-control" placeholder="Password" name="password" autoComplete="password" required/>
                 <label htmlFor="inputPassword">Password</label>
               </div>
-              {isSignUp && (<div className="form-label-group">
+              )}
+
+              {isSignUp && !addItem &&(<div className="form-label-group">
                 <input type="password" id="confirmPassword" className="form-control" placeholder="ConfirmPassword" name="confirmPassword" autoComplete="password" required/>
                 <label htmlFor="confirmPassword">ConfirmPassword</label>
               </div>
                )}
 
-              <div className="custom-control custom-checkbox mb-3" hidden={!isSignUp}>
+              {addItem && (<div className="form-label-group">
+                <input type="name" id="foodItem" className="form-control" placeholder="User name" name="foodItem" required autoFocus/>
+                <label htmlFor="foodItem">Food Item</label>
+              </div>
+                )}
+
+              {addItem && (<div className="form-label-group">
+                <input type="name" id="description" className="form-control" placeholder="User name" name="description" required autoFocus/>
+                <label htmlFor="description">Description</label>
+              </div>
+              )}
+
+              {addItem && (<div className="form-label-group">
+                <input type="number" id="price" className="form-control" placeholder="User name" name="price" required autoFocus/>
+                <label htmlFor="price">Price</label>
+              </div>
+              )}
+
+
+{/* 
+              <div className="custom-control custom-checkbox mb-3" hidden={!isSignUp || addItem}>
                 <input type="checkbox" className="custom-control-input" id="customCheck1"/>
                 <label className="custom-control-label" htmlFor="customCheck1">As admin</label>
-              </div>
+              </div> */}
               
              
              
               <button className="btn btn-lg btn-primary btn-block text-uppercase"  type="submit">{buttonName}</button>
-              <div hidden={!isSignUp}
+              <div hidden={!isSignUp || addItem}
               onClick={onChangeToLogin}
                 // role="button"
                 className="btn btn-link m-t-100"
