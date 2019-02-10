@@ -5,6 +5,8 @@ import HomeView from '../views/HomeView';
 import AuthView from '../views/AuthView';
 import configureStore from '../redux/store';
 import LoginView from '../views/LoginView';
+import MenuView from '../views/MenuView';
+import menu from '../views/Menu';
 const store = configureStore()
 
  class Routes extends Component {
@@ -16,6 +18,8 @@ const store = configureStore()
               <Route path="/" component={ HomeView } exact />
               <Route path="/register" component={ AuthView } />
               <Route path="/login" component={ LoginView } />
+              <Route path="/additem" component={ MenuView } />
+              <Route path="/get" component={ menu} />
             </Switch>
         </BrowserRouter>
        </Provider>

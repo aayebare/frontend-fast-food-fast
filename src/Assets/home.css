@@ -99,13 +99,30 @@
   font-size: 12px;
   color: #777;
 }
+/* .form-group {
+  width: 90%;
+} */
+.menu-container {
+  overflow: auto;
+  max-height: 700px;
 
-/* .btn-google {
-  color: white;
-  background-color: #ea4335;
+ }
+
+.item-link  {
+  list-style: none;
+  /* display: inline; */
+  margin: 2%;
+  border: 2px solid transparent;
+  border-radius: 15px 50px 30px;
+  background-color: rgb(3, 38, 61);
+  padding: 10px;
+  float: right;
+ 
+ 
+  
 }
 
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
-} */
+.link {
+  text-decoration: none;
+  color: aliceblue;
+}
