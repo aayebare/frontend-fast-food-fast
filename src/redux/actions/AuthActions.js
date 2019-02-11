@@ -1,13 +1,8 @@
 import { AUTH } from './types';
 
-
-export const signUpActionCreatorSuccess = signUpData => ({
+export const signUpActionCreatorSuccess = (signUpData) => ({
   type: AUTH.SIGN_UP_SUCCESS,
   signUpData,
 });
 
-// export const signUpActionCreatorFailure = errors => ({
-//   type: AUTH.SIGN_UP_FAILURE,
-//   errors,
-// });
 

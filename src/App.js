@@ -2,6 +2,7 @@ import React, { Component} from "react";
 import {hot} from "react-hot-loader";
 import "./App.css";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'msg-notify/dist/notify.css';
 import Routes from './routes'
 
 

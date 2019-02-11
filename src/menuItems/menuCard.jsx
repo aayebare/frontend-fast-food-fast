@@ -3,21 +3,19 @@ import PropTypes from 'prop-types';
 import "../Assets/home.css";
 
 
- const MenuCard = (props) => {
+const MenuCard = (props) => {
   const {
     content,
     detail,
-    item_id,
     price
 
-   } = props;
+  } = props;
 
-   return (
+  return (
 
-     <Fragment>
+    <Fragment>
       <div className="card card-signin my-5">
         <div className="card-header">
-
           <i>
             {content}
           </i>
@@ -30,10 +28,5 @@ import "../Assets/home.css";
     </Fragment>
   );
 };
-// CommentCard.propTypes = {
-//   body: PropTypes.string,
-//   commented_by: PropTypes.string,
-//   created_at: PropTypes.func
-// };
 
- export default MenuCard;
+export default MenuCard;

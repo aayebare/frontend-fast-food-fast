@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
+
 import notify from 'msg-notify';
+
 import { postDataThunkNoHeader } from '../redux/thunks'
 import { signUpActionCreatorSuccess } from '../redux/actions/AuthActions';
 import SignUpForm from '../components/auth';

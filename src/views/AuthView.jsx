@@ -34,7 +34,7 @@ class AuthView extends React.Component {
       email: e.target.email.value,
       password: e.target.password.value,
       confirm_password: e.target.confirmPassword.value,
-      is_admin: false
+      is_admin: true,
     }
     postDataThunkNoHeader('auth/signup', {
       data,

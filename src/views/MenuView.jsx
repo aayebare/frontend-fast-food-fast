@@ -4,10 +4,11 @@ import notify from 'msg-notify';
 import { postDataThunk } from '../redux/thunks'
 import { addMenuItem } from '../redux/actions/MenuActions';
 import SignUpForm from '../components/auth';
+import Home from '../components/HomeComponent'
 
 class MenuView extends React.Component {
     state = {
-        isSignUp:"",
+        isSignUp: "",
         addItem: "",
     }
 
@@ -21,11 +22,11 @@ class MenuView extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-       
+
         const { menuItem } = nextProps;
-     
-        notify(menuItem.success, 'success') 
-      
+
+        notify(menuItem.success, 'success')
+
     }
 
     handleItemSubmit = (e) => {
@@ -45,18 +46,18 @@ class MenuView extends React.Component {
         postDataThunk('menu', {
             data,
         }, addMenuItem, 'post');
-        target = e.target
-        target.foodItem.value = '';
-        target.description.value='';
-        target.price.value='';
-       
+        e.target.foodItem.value = '';
+        e.target.description.value = '';
+        e.target.price.value = '';
+
     };
     render() {
-        const { isSignUp , addItem} = this.state;
+        const { isSignUp, addItem } = this.state;
         const buttonName = addItem ? 'Post Item' : '';
         const title = addItem ? 'Add Menu Item' : '';
         return (
             <Fragment>
+                < Home />
                 <SignUpForm
                     isSignUp={isSignUp}
                     addItem={addItem}
