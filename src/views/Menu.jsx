@@ -6,6 +6,7 @@ import { getPrivateDataThunk } from '../redux/thunks'
 import { getMenu } from '../redux/actions/MenuActions';
 import MenuCard from '../menuItems/menuCard';
 import "../Assets/home.css";
+import Home from '../components/HomeComponent'
 
 
 
@@ -27,10 +28,11 @@ class Menu extends React.Component {
 
     return (
       <div>
-        <div className="item-link">
+        <Home />
+        {/* <div className="item-link">
           <Link className="link" to="/addItem">ADD NEW ITEM</Link>
-        </div>
-          <div className="menu-container">
+        </div> */}
+          <div className="col-lg-8 col-sm-12 menu-container">
             {menu.map((item, index) => <MenuCard {...item} key={index} />)}
           </div>
         </div>
